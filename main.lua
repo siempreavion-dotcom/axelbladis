@@ -5,7 +5,7 @@
 ]]
 
 local Settings = {
-    OwnerName = "TU_USUARIO_AQUI", -- <<< PON TU NOMBRE DE USUARIO DE ROBLOX AQUÍ
+    OwnerName = "L0YALTYYYYYYYYYYYYYY",
     Prediction = 0.135,
     WalkSpeedValue = 16,
     CamlockKey = Enum.KeyCode.Q,
@@ -27,7 +27,7 @@ local LockedTarget = nil
 local Visible = true
 local ListeningKey = false
 
--- [ GUI PRINCIPAL ]
+
 local ScreenGui = Instance.new("ScreenGui", game:GetService("CoreGui"))
 local MainFrame = Instance.new("Frame", ScreenGui)
 MainFrame.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
@@ -35,7 +35,7 @@ MainFrame.Size = UDim2.new(0, 380, 0, 260)
 MainFrame.Position = UDim2.new(0.5, -190, 0.5, -130)
 MainFrame.BorderSizePixel = 0
 
--- Barra Superior
+
 local TopBar = Instance.new("Frame", MainFrame)
 TopBar.Size = UDim2.new(1, 0, 0, 30)
 TopBar.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
@@ -43,7 +43,7 @@ local Title = Instance.new("TextLabel", TopBar)
 Title.Size = UDim2.new(1, -10, 1, 0); Title.Position = UDim2.new(0, 10, 0, 0)
 Title.Text = "BLADIS - PRIVATE"; Title.TextColor3 = Color3.new(1,1,1); Title.Font = Enum.Font.GothamBold; Title.TextXAlignment = "Left"; Title.BackgroundTransparency = 1
 
--- Tabs System
+
 local TabContainer = Instance.new("Frame", MainFrame)
 TabContainer.Size = UDim2.new(0, 80, 1, -30); TabContainer.Position = UDim2.new(0,0,0,30); TabContainer.BackgroundColor3 = Color3.fromRGB(20,20,20); TabContainer.BorderSizePixel = 0
 
@@ -65,7 +65,7 @@ local function CreateTabBtn(name, pos, target)
 end
 CreateTabBtn("Aim", 0, Tabs.Camlock); CreateTabBtn("Misc", 35, Tabs.Misc); CreateTabBtn("Info", 70, Tabs.Info)
 
--- [ SECCIÓN CAMLOCK ]
+
 local BindBtn = Instance.new("TextButton", Tabs.Camlock)
 BindBtn.Size = UDim2.new(1, 0, 0, 35); BindBtn.Text = "Keybind: " .. Settings.CamlockKey.Name; BindBtn.BackgroundColor3 = Color3.fromRGB(30,30,30); BindBtn.TextColor3 = Color3.new(0, 0.6, 1)
 BindBtn.MouseButton1Click:Connect(function() 
@@ -80,7 +80,7 @@ PredBox.FocusLost:Connect(function() Settings.Prediction = tonumber(PredBox.Text
 local SpeedToggle = Instance.new("TextButton", Tabs.Misc)
 SpeedToggle.Size = UDim2.new(1, 0, 0, 35); SpeedToggle.Text = "Speed: OFF [X]"; SpeedToggle.BackgroundColor3 = Color3.fromRGB(30,30,30); SpeedToggle.TextColor3 = Color3.new(1,1,1)
 
--- [ SECCIÓN INFO (TU AVATAR) ]
+
 local AvatarImg = Instance.new("ImageLabel", Tabs.Info)
 AvatarImg.Size = UDim2.new(0, 100, 0, 100); AvatarImg.Position = UDim2.new(0.5, -50, 0, 10)
 AvatarImg.BackgroundColor3 = Color3.fromRGB(30,30,30)
@@ -94,7 +94,7 @@ local OwnerText = Instance.new("TextLabel", Tabs.Info)
 OwnerText.Position = UDim2.new(0,0,0,120); OwnerText.Size = UDim2.new(1,0,0,30); OwnerText.BackgroundTransparency = 1
 OwnerText.Text = "OWNER: " .. Settings.OwnerName:upper(); OwnerText.TextColor3 = Color3.new(0, 0.7, 1); OwnerText.Font = "GothamBold"
 
--- [ LÓGICA DE FUNCIONAMIENTO ]
+]
 local function GetClosest()
     local t = nil; local d = math.huge
     for _, v in pairs(Players:GetPlayers()) do
